@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>InfernoX Community</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+}
+
+/* animated glow */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle, rgba(255,80,0,0.4), transparent 60%);
+animation:fireMove 8s linear infinite;
+z-index:-1;
+}
+
+@keyframes fireMove{
+0%{transform:translate(-20%,-20%)}
+50%{transform:translate(20%,20%)}
+100%{transform:translate(-20%,-20%)}
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0a0a0a;
+padding:15px 40px;
+box-shadow:0 0 20px red;
+}
+
+.logo{
+font-size:28px;
+color:orange;
+text-shadow:0 0 10px red,0 0 20px orange;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav a:hover{
+color:orange;
+}
+
+/* sections */
+
+section{
+padding:80px 40px;
+text-align:center;
+}
+
+/* hero */
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(black,#200000,#ff3300);
+}
+
+.hero h2{
+font-size:60px;
+color:orange;
+text-shadow:0 0 20px red;
+}
+
+/* members */
+
+.member-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.member-card{
+width:220px;
+background:#111;
+border:1px solid orange;
+padding:20px;
+border-radius:12px;
+transition:.3s;
+}
+
+.member-card img{
+width:120px;
+height:120px;
+border-radius:50%;
+border:3px solid orange;
+}
+
+.member-card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px red;
+}
+
+button{
+margin-top:10px;
+padding:10px 20px;
+background:linear-gradient(orange,red);
+border:none;
+color:white;
+cursor:pointer;
+}
+
+/* reels */
+
+.reel{
+margin:20px;
+}
+
+footer{
+background:#0a0a0a;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h1 class="logo">INFERNOX 🔥</h1>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#members">Members</a></li>
+<li><a href="#reels">Reels</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<h2>Welcome to InfernoX</h2>
+
+<p>The Fire Community of Instagram Creators</p>
+
+</section>
+
+<section id="about">
+
+<h2>About InfernoX</h2>
+
+<p>
+InfernoX is a community of Instagram creators who collaborate,
+share viral reels and grow together.
+</p>
+
+</section>
+
+<section id="members">
+
+<h2>Community Members</h2>
+
+<div class="member-container">
+
+<div class="member-card">
+
+<img src="https://i.pravatar.cc/150?img=1">
+
+<h3>@member1</h3>
+
+<p>Followers: <span id="f1">Loading...</span></p>
+
+<a href="https://instagram.com" target="_blank">
+<button>Instagram</button>
+</a>
+
+</div>
+
+
+<div class="member-card">
+
+<img src="https://i.pravatar.cc/150?img=2">
+
+<h3>@member2</h3>
+
+<p>Followers: <span id="f2">Loading...</span></p>
+
+<a href="https://instagram.com" target="_blank">
+<button>Instagram</button>
+</a>
+
+</div>
+
+
+<div class="member-card">
+
+<img src="https://i.pravatar.cc/150?img=3">
+
+<h3>@member3</h3>
+
+<p>Followers: <span id="f3">Loading...</span></p>
+
+<a href="https://instagram.com" target="_blank">
+<button>Instagram</button>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="reels">
+
+<h2>Popular Reels</h2>
+
+<div class="reel">
+
+<video width="300" controls>
+<source src="reel1.mp4">
+</video>
+
+</div>
+
+<div class="reel">
+
+<video width="300" controls>
+<source src="reel2.mp4">
+</video>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 InfernoX Community</p>
+
+</footer>
+
+<script>
+
+/* simulated follower counts */
+
+function randomFollowers(){
+
+return Math.floor(Math.random()*50000+1000)
+
+}
+
+document.getElementById("f1").innerText=randomFollowers()
+document.getElementById("f2").innerText=randomFollowers()
+document.getElementById("f3").innerText=randomFollowers()
+
+</script>
+
+</body>
+
+</html>
